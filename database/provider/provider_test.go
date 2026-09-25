@@ -12,7 +12,7 @@ import (
 func TestOpenAutoMigratesSQLite(t *testing.T) {
 	t.Parallel()
 
-	connStr := filepath.Join(t.TempDir(), "app.sqlite")
+	connStr := filepath.Join(t.TempDir(), "pb.sqlite")
 
 	dbi, err := Open(context.Background(), connStr)
 	if err != nil {

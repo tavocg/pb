@@ -33,14 +33,10 @@ import (
 var cfgFile string
 
 var rootCmd = &cobra.Command{
-	Use:   "app",
-	Short: "A brief description of your application",
-	Long: `A longer description that spans multiple lines and likely contains
-examples and usage of using your application. For example:
-
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
+	Use:   "pb",
+	Short: "A pastebin",
+	Long: `pb is a pastebin server that allow uploading binary data, and
+implements quality of life features for this task.`,
 	RunE: func(cmd *cobra.Command, args []string) error {
 		return runServerFromConfig()
 	},
@@ -73,7 +69,7 @@ func initConfig() {
 		viper.SetConfigName("app")
 	}
 
-	viper.SetEnvPrefix("APP")
+	viper.SetEnvPrefix("PB")
 	viper.SetEnvKeyReplacer(strings.NewReplacer(".", "_"))
 	viper.AutomaticEnv()
 

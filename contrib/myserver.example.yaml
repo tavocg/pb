@@ -1,34 +1,34 @@
-# app.yaml - Configuration for app
+# pb.yaml - Configuration for pb
 #
 # All options here are set to the default values. If no configuration file is
 # found, then these values will be used.
 
 # Enable development features like source locations in logs.
 # Override with:
-#   APP_DEV=true app serve
-#   app serve --dev
+#   PB_DEV=true pb serve
+#   pb serve --dev
 dev: false
 
 # Host or interface to bind to. Empty means the default bind behavior.
 # Override with:
-#   APP_HOST=127.0.0.1 app serve
-#   app serve --host 127.0.0.1
+#   PB_HOST=127.0.0.1 pb serve
+#   pb serve --host 127.0.0.1
 host: ""
 
 # TCP port to listen on.
 # Override with:
-#   APP_PORT=8080 app serve
-#   app serve --port 8080
+#   PB_PORT=8080 pb serve
+#   pb serve --port 8080
 port: 3080
 
 # Auth settings.
 # Override with:
-#   APP_AUTH_SECRET=change-me app serve
-#   app serve --auth-secret change-me
-#   APP_AUTH_ACCESS_TOKEN_TTL=15m app serve
-#   app serve --auth-access-ttl 15m
-#   APP_AUTH_REFRESH_TOKEN_TTL=720h app serve
-#   app serve --auth-refresh-ttl 720h
+#   PB_AUTH_SECRET=change-me pb serve
+#   pb serve --auth-secret change-me
+#   PB_AUTH_ACCESS_TOKEN_TTL=15m pb serve
+#   pb serve --auth-access-ttl 15m
+#   PB_AUTH_REFRESH_TOKEN_TTL=720h pb serve
+#   pb serve --auth-refresh-ttl 720h
 auth:
   secret: ""
   access-token-ttl: 15m
@@ -36,24 +36,24 @@ auth:
 
 # Route prefix to mount the app under.
 # Override with:
-#   APP_ROOT=/app app serve
-#   app serve --root /prefix
+#   PB_ROOT=/app pb serve
+#   pb serve --root /prefix
 root: ""
 
 # Log output format. Valid values: json, text.
 # Override with:
-#   APP_LOGFMT=text app serve
-#   app serve --logfmt text
+#   PB_LOGFMT=text pb serve
+#   pb serve --logfmt text
 logfmt: json
 
 # Minimum log level. Valid values: debug, info, warn, error.
 # Override with:
-#   APP_LOGLVL=debug app serve
-#   app serve --loglvl debug
+#   PB_LOGLVL=debug pb serve
+#   pb serve --loglvl debug
 loglvl: info
 
 # Database connection string or path.
 # Override with:
-#   APP_DB=data/custom.sqlite app serve
-#   app serve --db data/custom.sqlite
-db: data/app.sqlite
+#   PB_DB=data/custom.sqlite pb serve
+#   pb serve --db data/custom.sqlite
+db: data/pb.sqlite

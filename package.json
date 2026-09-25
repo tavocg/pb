@@ -1,7 +1,7 @@
 {
-  "name": "app",
+  "name": "pb",
   "version": "0.1.0",
-  "description": "App description",
+  "description": "A pastebin",
   "license": "GPL-3.0-or-later",
   "author": "",
   "type": "commonjs",

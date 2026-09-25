@@ -29,10 +29,10 @@ func init() {
 	viper.SetDefault("auth.access-token-ttl", 15*time.Minute)
 	viper.SetDefault("auth.refresh-token-ttl", 30*24*time.Hour)
 	viper.SetDefault("root", "")
-	viper.SetDefault("db", "data/app.sqlite")
+	viper.SetDefault("db", "data/pb.sqlite")
 
 	flags := rootCmd.PersistentFlags()
-	flags.String("db", "data/app.sqlite", "database DSN")
+	flags.String("db", "data/pb.sqlite", "database DSN")
 	flags.Bool("dev", false, "enable dev mode")
 	flags.String("host", "", "bind host")
 	flags.Int("port", 3080, "bind port")
